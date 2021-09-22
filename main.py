@@ -1,6 +1,5 @@
 import random
-
-
+from termcolor import colored
 
 #Allows player to actually setup the game themselves
 def setup ():
@@ -9,8 +8,8 @@ def setup ():
   global numb
   global life
   life = 10
-  print("\nWelcome to the Number Guessing game  ")
-  print("First off, I want you to choose your range  ")
+  print("\nWelcome to the " + colored("Number Guessing game", 'yellow', attrs=['bold']) )
+  print ("First off, I want you to choose your range ")
   n =input("\nType in the minimum number you want me to guess from   ")
   d =input("Now type in the maximum number you want me to guess from   ")
   numb = random.randint(int(n),int(d))
@@ -23,12 +22,12 @@ def guessing():
     if int(guess) < int(numb):
       print ("\nThat guess is too low")
       life = life - 1
-      print(" You now have " + str(life))
+      print(" You now have " + colored(str(life), 'red', attrs=['bold']))
       guess = input ("\n Try again  ")
     elif int(guess) > int(numb):
       print ("\nThat guess is too high")
       life = life - 1
-      print(" You now have " + str(life))
+      print(" You now have " + colored(str(life), 'green', attrs=['bold']))
       guess = input ("\n Try again  ")
 
 #Response once player has either won or lost all lives
