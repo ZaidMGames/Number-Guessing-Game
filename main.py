@@ -1,12 +1,14 @@
 import random
 
-life = 10
+
 
 #Allows player to actually setup the game themselves
 def setup ():
   global n
   global d
   global numb
+  global life
+  life = 10
   print("\nWelcome to the Number Guessing game  ")
   print("First off, I want you to choose your range  ")
   n =input("\nType in the minimum number you want me to guess from   ")
