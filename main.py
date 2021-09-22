@@ -2,6 +2,7 @@ import random
 
 life = 10
 
+#Allows player to actually setup the game themselves
 def setup ():
   global n
   global d
@@ -12,6 +13,7 @@ def setup ():
   d =input("Now type in the maximum number you want me to guess from   ")
   numb = random.randint(int(n),int(d))
 
+#Game itself
 def guessing():
   global life
   guess = input ("\nTry guess a number between " + n  + " and " + d + " ")
@@ -26,7 +28,8 @@ def guessing():
       life = life - 1
       print(" You now have " + str(life))
       guess = input ("\n Try again  ")
-  
+
+#Response once player has either won or lost all lives
 def checking():
   global again
   if int(life) > 1 :
@@ -45,7 +48,7 @@ guessing();
 checking()
 
 
-
+#Restart Game or Close Program options here
 while  again.lower() == "y":
   setup()
   guessing();
