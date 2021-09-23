@@ -1,4 +1,4 @@
-import simple_color
+from simple_colors import *
 import random
 from termcolor import colored
 
