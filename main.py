@@ -1,3 +1,4 @@
+from simple_colors import *
 import random
 from termcolor import colored
 
@@ -31,7 +32,7 @@ def guessing():
                   colored(str(life), 'red', attrs=['bold']) + " Lives")
             guess = input("\n Try again  ")
         elif int(guess) > int(numb):
-            print("\nThat guess is too high")
+            print("\nThat guess is", red("too high", ["bold"]))
             life = life - 1
             print(" You now have " +
                   colored(str(life), 'green', attrs=['bold']) + " Lives")
@@ -63,4 +64,4 @@ while again.lower() == "y":
     checking()
 
 if again.lower() == "n":
-    print("\nThanks for Playing, Have a good rest of your day, Bye bye now ")
+    print("\nThanks for Playing, Have a good rest of your day,", cyan("Bye bye now ",['bold']))

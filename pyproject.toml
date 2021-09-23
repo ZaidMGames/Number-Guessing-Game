@@ -8,6 +8,7 @@ authors = ["ZMGG <<>>"]
 python = "^3.8"
 termcolor = "^1.1.0"
 colorama = "^0.4.4"
+simple-colors = "^0.1.5"
 
 [tool.poetry.dev-dependencies]
 
